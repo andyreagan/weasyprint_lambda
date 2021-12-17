@@ -1,4 +1,4 @@
-FROM lambci/lambda:build-python3.7
+FROM lambci/lambda:build-python3.8
 
 # Based on https://aws.amazon.com/premiumsupport/knowledge-center/lambda-linux-binary-package/
 RUN yum install -y yum-utils rpmdevtools
