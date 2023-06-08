@@ -1,4 +1,6 @@
-FROM lambci/lambda:build-python3.8
+FROM public.ecr.aws/sam/build-python3.9
+ARG DEBIAN_FRONTEND=noninteractive
+RUN yum update -y
 
 # Based on https://aws.amazon.com/premiumsupport/knowledge-center/lambda-linux-binary-package/
 RUN yum install -y yum-utils rpmdevtools
