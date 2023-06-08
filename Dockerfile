@@ -7,7 +7,7 @@ RUN yum install -y yum-utils rpmdevtools
 WORKDIR /tmp
 RUN yumdownloader libffi libffi-devel cairo pango && rpmdev-extract *rpm
 
-RUN mkdir /opt/lib
+RUN mkdir /opt/python
 WORKDIR /opt
 RUN cp -P -R /tmp/*/usr/lib64/* /opt/python
 RUN ln python/libpango-1.0.so.0 python/pango-1.0.0 && ln python/libpangocairo-1.0.so.0 python/pangocairo-1.0
